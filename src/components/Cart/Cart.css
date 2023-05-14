@@ -1,7 +1,16 @@
-.cart{
-    background-color: #FFE0B3;
-    padding: 1rem;
-    margin-top: 3rem;
-    position: sticky;
-    top: 130px;
+.cart {
+  background-color: #ffe0b3;
+  padding: 1rem;
+  margin-top: 3rem;
+  position: sticky;
+  top: 130px;
+}
+
+.delete-cart-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  background: #ff3030;
+  border-radius: 4px;
 }
