@@ -31,7 +31,7 @@ const Shop = () => {
     // console.log(pageNumbers);
 
     const pageNumbers = [...Array(totalPages).keys()]
-    console.log(pageNumbers);
+    // console.log(pageNumbers);
 
 
 
