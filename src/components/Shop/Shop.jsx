@@ -37,16 +37,28 @@ const Shop = () => {
 
 
 
-    useEffect(()=> {
+    // useEffect(()=> {
         
-        const loadData = async() => {
-            const res = await fetch("http://localhost:5000/products")
-            const data = await res.json()
-            setProducts(data);
-        }
-        loadData()
+    //     const loadData = async() => {
+    //         const res = await fetch("http://localhost:5000/products")
+    //         const data = await res.json()
+    //         setProducts(data);
+    //     }
+    //     loadData()
 
-    }, [])
+    // }, [])
+
+
+    useEffect(() => {
+         async function fetchData(){
+            const response = await fetch(`http://localhost:5000/products?page=${currentPage}&limit=${itemsPerPage}`)
+            const data = await response.json();
+            setProducts(data)
+         }
+         fetchData();
+
+      }, [currentPage, itemsPerPage]);
+
 
     useEffect(()=> {
         const storedCart = getShoppingCart();
