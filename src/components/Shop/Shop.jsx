@@ -139,7 +139,7 @@ const Shop = () => {
             <div className="pagination">
                 <p>current Page: {currentPage} and items per Page: {itemsPerPage}</p>
                 {
-                    pageNumbers.map(number => <button className={currentPage === number ? "selected" : ''} onClick={()=> setCurrentPage(number)} key={number}>{number}</button>)
+                    pageNumbers.map(number => <button className={currentPage === number ? "selected" : ''} onClick={()=> setCurrentPage(number)} key={number}>{number + 1}</button>)
                 }
                 <select value={itemsPerPage} onChange={handleSelectChange}>
                     {options.map(option => (
